@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+
+  * {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+}
+
+/* Smooth continuous Left-to-Right Ticker Animation */
+@keyframes ticker-ltr {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Right-to-Left Ticker Animation if user toggles */
+@keyframes ticker-rtl {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-track-ltr {
+  display: flex;
+  width: max-content;
+  animation: ticker-ltr var(--ticker-duration, 35s) linear infinite;
+  will-change: transform;
+}
+
+.ticker-track-rtl {
+  display: flex;
+  width: max-content;
+  animation: ticker-rtl var(--ticker-duration, 35s) linear infinite;
+  will-change: transform;
+}
+
+.ticker-container:hover .ticker-track-ltr,
+.ticker-container:hover .ticker-track-rtl {
+  animation-play-state: var(--hover-play-state, paused);
+}
+
+/* Custom scrollbars and compact styling for Arial 12 */
+.font-arial-12 {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+  font-size: 12px !important;
+}
