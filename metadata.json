@@ -1,6 +1,6 @@
 {
   "name": "LTA Singapore Bus Arrival Ticker",
-  "description": "Live Singapore bus arrival times ticker scrolling from left to right using Arial 12pt font and LTA DataMall API.",
+  "description": "Live Singapore bus arrival times ticker scrolling from right to left using Arial 12pt font and LTA DataMall API.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

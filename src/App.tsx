@@ -127,8 +127,8 @@ export default function App() {
         <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-neutral-900 to-transparent z-10" />
         <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-neutral-900 to-transparent z-10" />
 
-        {/* Scrolling track: moves from Left to Right */}
-        <div className="ticker-track-ltr">
+        {/* Scrolling track: moves from Right to Left */}
+        <div className="ticker-track-rtl">
           {/* Duplicated 2 times for exact 50% seamless continuous loop */}
           {[0, 1].map((loopIdx) => (
             <div key={loopIdx} className="flex items-center shrink-0">
@@ -173,18 +173,12 @@ export default function App() {
                         {nb1.label}
                       </span>
 
-                      {/* Load & Type indicators */}
+                      {/* Load indicator */}
                       {load1.text && (
                         <span
                           className={`px-1.5 py-0.5 rounded border text-[11px] ${load1.cls}`}
                         >
                           {load1.text}
-                        </span>
-                      )}
-
-                      {svc.NextBus?.Type && (
-                        <span className="px-1 py-0.2 bg-neutral-800 rounded border border-neutral-700 text-neutral-400 text-[11px]">
-                          {svc.NextBus.Type}
                         </span>
                       )}
 
